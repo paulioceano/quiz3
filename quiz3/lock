@@ -1,0 +1,15 @@
+    
+    var lock = new Auth0Lock(clientID, auth0Domain, {
+      auth: {
+        redirectUrl: 'https://someurl.com',
+        responseType: 'token',
+      },
+       allowedConnections: ['Username-Password-Authentication', 'facebook'],
+       languageDictionary: {
+         title: 'Rainbows'
+       },
+      closable: false,
+       socialButtonStyle: 'small'
+    });
+
+    lock.show();
